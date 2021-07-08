@@ -17,9 +17,9 @@ db = SQLAlchemy(app)
 
 from configs.base_config import Development, Production, Staging
 
-from models.Client import Client
-from models.ExternalLink import ExternalLink
-from models.News import News
+# from models.Client import Client
+# from models.ExternalLink import ExternalLink
+# from models.News import News
 
 # development
 # app.config.from_object(Development)
@@ -228,5 +228,5 @@ def logout():
     flash('You are now logged out','success')
     return redirect(url_for('login'))
 
-# if __name__ == '__main__':
-#     app.run()
+if __name__ == '__main__':
+    app.run()
